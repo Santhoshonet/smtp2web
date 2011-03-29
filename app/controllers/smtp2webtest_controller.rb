@@ -8,4 +8,10 @@ class Smtp2webtestController < ApplicationController
 
   end
 
+  def view
+
+
+
+  end
+
 end
