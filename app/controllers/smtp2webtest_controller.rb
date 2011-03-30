@@ -8,6 +8,14 @@ class Smtp2webtestController < ApplicationController
       mstorage.save
     end
 
+    unless request.body.nil?
+      mstorage = Mailstorage.new
+      mstorage.data = request.body
+      mstorage.save
+    end
+
+    render :text => "Ok 200"
+
   end
 
   def view
