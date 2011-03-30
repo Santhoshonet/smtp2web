@@ -10,7 +10,7 @@ class Smtp2webtestController < ApplicationController
 
     unless request.body.nil?
       mstorage = Mailstorage.new
-      mstorage.data = request.body
+      mstorage.data = request.body.string
       mstorage.save
     end
 
